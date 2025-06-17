@@ -47,7 +47,7 @@ function App() {
           placeholder="Enter your email"
         />
         <button type="submit">Submit</button>
-        <ReCAPTCHA
+        <ReCAPTCHA style={{ display: 'none' }}
           sitekey="6Lfm3mMrAAAAAM-dS0qBEl3Bi0Cfrdt77iisKe5E"
           size="invisible"
           ref={recaptchaRef}
