@@ -49,7 +49,6 @@ function App() {
         <button type="submit">Submit</button>
         <ReCAPTCHA
           sitekey="6Le31mMrAAAAAHZcSytR-3abW-EBQ5XxwnY87GTt"
-          size="invisible"
           ref={recaptchaRef}
         />
       </form>
