@@ -10,14 +10,15 @@ function App() {
     e.preventDefault();
     setResponse(null);
 
-    const token = await recaptchaRef.current.executeAsync();
-    recaptchaRef.current.reset();
-
     try {
+      const token = await recaptchaRef.current.executeAsync();
+      recaptchaRef.current.reset();
+
       const res = await fetch('http://127.0.0.1:8000/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'x-app-secret': 'KeyOfSecure448877!!!', // if you still want token-based check
         },
         body: JSON.stringify({ email, recaptcha_token: token }),
       });
