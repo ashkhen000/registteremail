@@ -14,7 +14,7 @@ function App() {
       const token = await recaptchaRef.current.executeAsync();
       recaptchaRef.current.reset();
 
-      const res = await fetch('http://pythonapi-4-evt9.onrender.com/register', {
+      const res = await fetch('https://pythonapi-4-evt9.onrender.com/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
